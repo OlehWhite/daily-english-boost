@@ -1,25 +1,29 @@
+'use client';
+
+import Actions from '@/components/header/Actions';
 import Logo from '@/components/header/Logo';
 import Nav from '@/components/header/Nav';
-import Button from '@/components/UI/Button';
-import { loginButton, startedButton } from '@/constants/animations';
+import { headerAnimations } from '@/constants/animations';
+import { motion } from 'framer-motion';
+import { useInView } from 'motion/react';
+import { useRef } from 'react';
 
 const Header = () => {
+  const ref = useRef<HTMLHeadElement>(null);
+  const isInView = useInView(ref, { once: true });
+
   return (
-    <header className="flex items-center justify-between">
+    <motion.header
+      ref={ref}
+      initial="hidden"
+      animate={isInView ? 'visible' : 'hidden'}
+      variants={headerAnimations}
+      className="flex items-center justify-between bg-white p-5 rounded-[20px] "
+    >
       <Logo />
-
       <Nav />
-
-      <div className="flex gap-2">
-        <Button delay={2} variants={loginButton}>
-          Login
-        </Button>
-
-        <Button delay={1} variants={startedButton}>
-          Get started
-        </Button>
-      </div>
-    </header>
+      <Actions />
+    </motion.header>
   );
 };
 

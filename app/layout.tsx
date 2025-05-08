@@ -1,5 +1,6 @@
 import '@/app/globals.css';
 import Header from '@/components/header/Header';
+import '@/styles/gradients.css';
 import type { Metadata } from 'next';
 import { Luckiest_Guy } from 'next/font/google';
 import { ReactNode } from 'react';
@@ -22,7 +23,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
     <html lang="en">
       <body className={`${luckiestGuy.variable} font-[family-name:var(--font-luckiest-guy)]`}>
         <Header />
-        <main className="p-5">{children}</main>
+        <main>{children}</main>
       </body>
     </html>
   );

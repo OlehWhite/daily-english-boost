@@ -1,27 +1,27 @@
 module.exports = {
   extends: [
-    "next/core-web-vitals",
-    "plugin:import/errors",
-    "plugin:import/warnings",
-    "plugin:import/typescript",
-    "plugin:unused-imports/recommended"
+    'next/core-web-vitals',
+    'plugin:import/errors',
+    'plugin:import/warnings',
+    'plugin:import/typescript',
+    'plugin:unused-imports/recommended',
   ],
   rules: {
-    "unused-imports/no-unused-imports": "error",
-    "import/order": [
-      "error",
+    'unused-imports/no-unused-imports': 'error',
+    'import/order': [
+      'error',
       {
-        groups: ["builtin", "external", "internal"],
+        groups: ['builtin', 'external', 'internal'],
         pathGroups: [
           {
-            pattern: "@/**",
-            group: "internal",
+            pattern: '@/**',
+            group: 'internal',
           },
         ],
-        pathGroupsExcludedImportTypes: ["builtin"],
-        "newlines-between": "always",
+        pathGroupsExcludedImportTypes: ['builtin'],
+        'newlines-between': 'always',
         alphabetize: {
-          order: "asc",
+          order: 'asc',
           caseInsensitive: true,
         },
       },
