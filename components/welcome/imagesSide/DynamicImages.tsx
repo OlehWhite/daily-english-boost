@@ -1,33 +1,26 @@
-import ExclamationIMG from '@/public/images/exclamation-mark.png';
+import MotionMark from '@/components/UI/MotionMark';
+import { dynamicImages } from '@/constants/dynamic-images';
 import FemaleIMG from '@/public/images/female-person.png';
 import MaleIMG from '@/public/images/male-person.png';
-import QuestionIMG from '@/public/images/question-mark.png';
 import Image from 'next/image';
 
 const DynamicImages = () => {
   return (
-    <div className="flex">
+    <div className="relative flex">
       <div className="relative right-[-70px] top-[200px] border-2 rounded-[20px] w-[350px] h-[500px] border-blue-400">
-        <Image
-          src={MaleIMG}
-          width={250}
-          alt="Male persone"
-          placeholder="blur"
-          className="absolute bottom-0 left-[12%]"
-        />
+        <span>
+          <Image
+            src={MaleIMG}
+            width={250}
+            alt="Male persone"
+            placeholder="blur"
+            className="absolute bottom-0 left-[13%]"
+          />
+        </span>
 
-        <span>
-          <Image src={ExclamationIMG} width={100} alt="Exclamation mark" />
-        </span>
-        <span>
-          <Image src={ExclamationIMG} width={100} alt="Exclamation mark" />
-        </span>
-        <span>
-          <Image src={QuestionIMG} width={100} alt="Question mark" />
-        </span>
-        <span>
-          <Image src={QuestionIMG} width={100} alt="Question mark" />
-        </span>
+        {dynamicImages.map((element) => (
+          <MotionMark key={element.id} element={element} />
+        ))}
       </div>
 
       <div className="relative right-[-40px]  border-2 rounded-[20px] w-[350px] h-[500px] border-gray-600 ">
@@ -36,21 +29,12 @@ const DynamicImages = () => {
           width={210}
           alt="Female persone"
           placeholder="blur"
-          className="absolute bottom-0 left-[12%]"
+          className="absolute bottom-0 left-[13%]"
         />
 
-        <span>
-          <Image src={ExclamationIMG} width={100} alt="Exclamation mark" />
-        </span>
-        <span>
-          <Image src={ExclamationIMG} width={100} alt="Exclamation mark" />
-        </span>
-        <span>
-          <Image src={QuestionIMG} width={100} alt="Question mark" />
-        </span>
-        <span>
-          <Image src={QuestionIMG} width={100} alt="Question mark" />
-        </span>
+        {dynamicImages.map((element) => (
+          <MotionMark key={element.id} element={element} />
+        ))}
       </div>
     </div>
   );

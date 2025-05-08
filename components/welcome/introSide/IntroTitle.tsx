@@ -12,7 +12,7 @@ const IntroTitle = () => {
       initial="hidden"
       animate={isInView ? 'visible' : 'hidden'}
       variants={introTitleAnimations}
-      className="flex flex-col text-[46px] font-bold "
+      className="flex flex-col text-[46px] font-bold"
     >
       <span>Learn English your way.</span>
       <span>Every single day.</span>
