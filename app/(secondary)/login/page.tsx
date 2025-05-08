@@ -5,7 +5,6 @@ const Page = () => {
   return (
     <div>
       <Image src={Background} alt="Background logo" placeholder="blur" priority />
-      
     </div>
   );
 };

@@ -1,3 +1,0 @@
-export const TITLES = {
-  H1: 'PLATFORM FOR LEARNING & WRITING ENGLISH',
-};
