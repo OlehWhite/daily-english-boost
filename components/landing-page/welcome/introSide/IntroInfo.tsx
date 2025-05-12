@@ -1,5 +1,5 @@
-import IntroDescription from '@/components/welcome/introSide/IntroDescription';
-import IntroTitle from '@/components/welcome/introSide/IntroTitle';
+import IntroDescription from '@/components/landing-page/welcome/introSide/IntroDescription';
+import IntroTitle from '@/components/landing-page/welcome/introSide/IntroTitle';
 
 const IntroInfo = () => {
   return (

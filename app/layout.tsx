@@ -1,5 +1,5 @@
 import '@/app/globals.css';
-import Header from '@/components/header/Header';
+import Header from '@/components/landing-page/header/Header';
 import '@/styles/gradients.css';
 import type { Metadata } from 'next';
 import { Luckiest_Guy } from 'next/font/google';

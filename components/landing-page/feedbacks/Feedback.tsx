@@ -1,6 +1,6 @@
 'use client';
 
-import RatingClient from '@/components/feedbacks/RatingClient';
+import RatingClient from '@/components/landing-page/feedbacks/RatingClient';
 import { leftFeedbacksAnimations, rightFeedbacksAnimations } from '@/constants/animations';
 import type { IFeedback } from '@/types/Feedback';
 import { motion, useInView } from 'motion/react';
@@ -23,7 +23,7 @@ const Feedback = ({ feedback }: Props) => {
       initial="hidden"
       animate={isInView ? 'visible' : 'hidden'}
       variants={even ? leftFeedbacksAnimations : rightFeedbacksAnimations}
-      className="flex flex-col justify-between border-gray-600 border-1 rounded-lg p-5 w-full max-w-[460px]"
+      className="flex flex-col justify-between border-blue-400 border-1 rounded-lg p-5 w-full max-w-[460px]"
     >
       <div>
         <RatingClient rating={feedback.rating} />

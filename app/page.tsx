@@ -1,5 +1,5 @@
-import Feedbacks from '@/components/feedbacks/Feedbacks';
-import Welcome from '@/components/welcome/Welcome';
+import Feedbacks from '@/components/landing-page/feedbacks/Feedbacks';
+import Welcome from '@/components/landing-page/welcome/Welcome';
 
 const Page = () => {
   return (

@@ -39,7 +39,7 @@ export const headerAnimations = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: 'easeOut' } },
 };
 
-export const welcomeAnimations = {
+export const sectionAnimations = {
   hidden: { opacity: 0, y: 150 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.75, ease: 'easeOut' } },
 };
