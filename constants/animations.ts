@@ -39,7 +39,7 @@ export const headerAnimations = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: 'easeOut' } },
 };
 
-export const welcomeAnimations = {
+export const sectionAnimations = {
   hidden: { opacity: 0, y: 150 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.75, ease: 'easeOut' } },
 };
@@ -58,4 +58,14 @@ export const introDesAnimations = {
 export const introTitleAnimations = {
   hidden: { opacity: 0, x: 20 },
   visible: { opacity: 1, x: 0, transition: { delay: 0.5, duration: 1, ease: 'easeOut' } },
+};
+
+export const leftFeedbacksAnimations = {
+  hidden: { opacity: 0, x: 150 },
+  visible: { opacity: 1, x: 0, transition: { delay: 0.5, duration: 0.5, ease: 'easeOut' } },
+};
+
+export const rightFeedbacksAnimations = {
+  hidden: { opacity: 0, x: -150 },
+  visible: { opacity: 1, x: 0, transition: { delay: 0.5, duration: 0.5, ease: 'easeOut' } },
 };

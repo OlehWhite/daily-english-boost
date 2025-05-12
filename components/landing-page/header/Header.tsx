@@ -1,8 +1,8 @@
 'use client';
 
-import Actions from '@/components/header/Actions';
-import Logo from '@/components/header/Logo';
-import Nav from '@/components/header/Nav';
+import Actions from '@/components/landing-page/header/Actions';
+import Logo from '@/components/landing-page/header/Logo';
+import Nav from '@/components/landing-page/header/Nav';
 import { headerAnimations } from '@/constants/animations';
 import { motion } from 'framer-motion';
 import { useInView } from 'motion/react';

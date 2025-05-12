@@ -6,8 +6,8 @@ export const navigations = [
   },
   {
     id: 1,
-    name: 'Lets start',
-    link: '#lets-start',
+    name: 'Feedbacks',
+    link: '#feedbacks',
   },
   {
     id: 2,
