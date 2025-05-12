@@ -19,6 +19,10 @@
   font-family: var(--font-luckiest-guy), cursive;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   width: 100%;
   max-width: 1440px;
