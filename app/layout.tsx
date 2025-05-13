@@ -1,4 +1,5 @@
 import '@/app/globals.css';
+import Footer from '@/components/landing-page/footer/Footer';
 import Header from '@/components/landing-page/header/Header';
 import '@/styles/gradients.css';
 import type { Metadata } from 'next';
@@ -24,6 +25,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       <body className={`${luckiestGuy.variable} font-[family-name:var(--font-luckiest-guy)]`}>
         <Header />
         <main>{children}</main>
+        <Footer />
       </body>
     </html>
   );

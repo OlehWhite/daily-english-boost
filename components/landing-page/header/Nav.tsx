@@ -1,6 +1,6 @@
 'use client';
 
-import { linkAnimations, navAnimations } from '@/constants/animations';
+import { childAnimations, navAnimations } from '@/constants/animations';
 import { navigations } from '@/constants/navigations';
 import { motion } from 'framer-motion';
 import { useInView } from 'motion/react';
@@ -22,7 +22,7 @@ const Nav = () => {
         <motion.a
           href={nav.link}
           key={nav.id}
-          variants={linkAnimations}
+          variants={childAnimations}
           whileHover={{ scale: 1.25, transition: { duration: 0.3 } }}
         >
           <span className="text-lg font-bold cursor-pointer duration-300 text-grad">

@@ -1,11 +1,15 @@
-import Feedbacks from '@/components/landing-page/feedbacks/Feedbacks';
-import Welcome from '@/components/landing-page/welcome/Welcome';
+import Features from '@/components/landing-page/feature/Features';
+import Herro from '@/components/landing-page/herro/Herro';
+import HowItWorks from '@/components/landing-page/how-it-works/HowItWorks';
 
 const Page = () => {
   return (
     <>
-      <Welcome />
-      <Feedbacks />
+      {/*<Welcome />*/}
+      {/*<Feedbacks />*/}
+      <Herro />
+      <HowItWorks />
+      <Features />
     </>
   );
 };
