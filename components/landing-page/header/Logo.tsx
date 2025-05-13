@@ -18,10 +18,10 @@ const Logo = () => {
         initial="hidden"
         animate={isInView ? 'visible' : 'hidden'}
         variants={animationLogo}
-        transition={{ duration: 0.7, ease: 'easeOut', delay: 1 }}
+        transition={{ duration: 0.7, ease: 'easeOut' }}
         className="flex items-center gap-2"
       >
-        <Image src={LogoIMG} width={60} alt="Logo" placeholder="blur" />
+        <Image src={LogoIMG} width={50} alt="Logo" placeholder="blur" />
       </motion.div>
 
       <div>
@@ -29,8 +29,8 @@ const Logo = () => {
           initial="hidden"
           animate={isInView ? 'visible' : 'hidden'}
           variants={animationText}
-          transition={{ duration: 0.7, ease: 'easeOut', delay: 2 }}
-          className="text-xl leading-[100%] font-bold text-grad"
+          transition={{ duration: 0.7, ease: 'easeOut', delay: 0.3 }}
+          className="text-md leading-[100%] font-bold text-grad"
         >
           Daily
         </motion.p>
@@ -39,8 +39,8 @@ const Logo = () => {
           initial="hidden"
           animate={isInView ? 'visible' : 'hidden'}
           variants={animationText}
-          transition={{ duration: 0.7, ease: 'easeOut', delay: 2.5 }}
-          className="text-xl leading-[100%] font-bold text-grad"
+          transition={{ duration: 0.7, ease: 'easeOut', delay: 0.4 }}
+          className="text-md leading-[100%] font-bold text-grad"
         >
           English
         </motion.p>
@@ -49,8 +49,8 @@ const Logo = () => {
           initial="hidden"
           animate={isInView ? 'visible' : 'hidden'}
           variants={animationText}
-          transition={{ duration: 0.7, ease: 'easeOut', delay: 3 }}
-          className="text-xl  leading-[100%] font-bold text-grad"
+          transition={{ duration: 0.7, ease: 'easeOut', delay: 0.5 }}
+          className="text-md  leading-[100%] font-bold text-grad"
         >
           Boost
         </motion.p>
