@@ -13,9 +13,9 @@ const InfoBlock = ({ element }: Props) => {
       variants={childVerticalAnimations}
       className="flex flex-col gap-3 justify-center items-center "
     >
-      <Image src={element.icon} width={150} height={150} alt={element.title} />
-      <h3 className="text-[22px] font-bold">{element.title}</h3>
-      <p className="text-[18px] text-gray-500">{element.description}</p>
+      <Image src={element.icon} width={120} height={120} alt={element.title} />
+      <h3 className="text-[22px] font-bold text-center">{element.title}</h3>
+      <p className="text-[18px] text-gray-500 text-center">{element.description}</p>
     </motion.div>
   );
 };

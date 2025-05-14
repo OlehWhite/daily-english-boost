@@ -18,7 +18,13 @@ const Introduction = () => {
       variants={rightFeedbacksAnimations}
       className="flex flex-col gap-4 w-full max-w-[400px]"
     >
-      <h1 className="text-[60px] leading-[96%] font-bold">
+      <h1
+        className="
+          text-[30px] leading-[96%] font-bold
+          md:text-[45px]
+          lg:text-[60px]
+        "
+      >
         Boost your English, one small step at a time.
       </h1>
 

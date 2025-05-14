@@ -21,7 +21,13 @@ const HowItWorks = () => {
     >
       <h2 className="text-[45px] leading-[96%] font-bold">How it works</h2>
 
-      <motion.div variants={introDesAnimations} className="flex gap-8">
+      <motion.div
+        variants={introDesAnimations}
+        className="
+          flex flex-col gap-8
+          md:flex-row
+        "
+      >
         {howItWorks.map((element) => (
           <InfoBlock key={element.id} element={element} />
         ))}
