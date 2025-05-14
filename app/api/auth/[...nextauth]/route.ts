@@ -1,11 +1,7 @@
-import NextAuth from 'next-auth';
+import NextAuth, { NextAuthOptions } from 'next-auth';
 import GoogleProvider from 'next-auth/providers/google';
 
-const handler = NextAuth({
-  pages: {
-    signIn: '/signin',
-    signOut: '/',
-  },
+export const authOptions: NextAuthOptions = {
   providers: [
     GoogleProvider({
       clientId: process.env.GOOGLE_CLIENT_ID!,
@@ -13,15 +9,20 @@ const handler = NextAuth({
     }),
   ],
   secret: process.env.NEXTAUTH_SECRET,
+  pages: {
+    signIn: '/signin',
+  },
+
   callbacks: {
     async session({ session, token }) {
-      // Додаємо user id з токена в session
-      if (token.sub) {
+      console.log(session);
+      if (session?.user && token?.sub) {
         session.user.id = token.sub;
       }
       return session;
     },
   },
-});
+};
 
+const handler = NextAuth(authOptions);
 export { handler as GET, handler as POST };
