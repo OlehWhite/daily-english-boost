@@ -7,9 +7,10 @@ interface Props {
   children: ReactNode;
   delay?: number;
   variants?: Variants;
+  onClick?: () => void;
 }
 
-const Button = ({ children, delay = 0.5, variants }: Props) => {
+const Button = ({ children, delay = 0.5, variants, onClick }: Props) => {
   const ref = useRef<HTMLButtonElement>(null);
   const isInView = useInView(ref, { once: true });
 
@@ -21,7 +22,10 @@ const Button = ({ children, delay = 0.5, variants }: Props) => {
       variants={variants}
       transition={{ duration: 0.7, ease: 'easeOut', delay }}
     >
-      <button className="w-[120px] h-[40px] rounded-md cursor-pointer bg-blue-400 hover:bg-blue-500 duration-300 text-white font-semibold flex items-center justify-center ">
+      <button
+        onClick={onClick}
+        className="w-[120px] h-[40px] rounded-md cursor-pointer bg-blue-400 hover:bg-blue-500 duration-300 text-white font-semibold flex items-center justify-center "
+      >
         {children}
       </button>
     </motion.span>

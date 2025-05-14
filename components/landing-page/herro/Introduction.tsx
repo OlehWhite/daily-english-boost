@@ -1,9 +1,9 @@
 'use client';
 
-import Button from '@/components/UI/Button';
 import { rightFeedbacksAnimations } from '@/constants/animations';
 import { motion } from 'framer-motion';
 import { useInView } from 'motion/react';
+import Link from 'next/link';
 import { useRef } from 'react';
 
 const Introduction = () => {
@@ -26,7 +26,12 @@ const Introduction = () => {
         Track progress, learn new words, build confidence.
       </p>
 
-      <Button>Try Demo</Button>
+      <Link
+        href="/api/auth/signin"
+        className="w-[120px] h-[40px] rounded-md cursor-pointer bg-blue-400 hover:bg-blue-500 duration-300 text-white font-semibold flex items-center justify-center "
+      >
+        Try Demo
+      </Link>
     </motion.div>
   );
 };

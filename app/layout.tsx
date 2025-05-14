@@ -1,8 +1,9 @@
 import '@/app/globals.css';
-import Footer from '@/components/landing-page/footer/Footer';
-import Header from '@/components/landing-page/header/Header';
+import { authOptions } from '@/app/lib/authOptions';
+import Provider from '@/components/Provider';
 import '@/styles/gradients.css';
 import type { Metadata } from 'next';
+import { getServerSession } from 'next-auth';
 import { Luckiest_Guy } from 'next/font/google';
 import { ReactNode } from 'react';
 
@@ -19,13 +20,13 @@ const luckiestGuy = Luckiest_Guy({
   display: 'swap',
 });
 
-export default function RootLayout({ children }: { children: ReactNode }) {
+export default async function RootLayout({ children }: { children: ReactNode }) {
+  const session = await getServerSession(authOptions);
+
   return (
     <html lang="en">
       <body className={`${luckiestGuy.variable} font-[family-name:var(--font-luckiest-guy)]`}>
-        <Header />
-        <main>{children}</main>
-        <Footer />
+        <Provider session={session}>{children}</Provider>
       </body>
     </html>
   );
