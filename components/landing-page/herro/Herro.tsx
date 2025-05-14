@@ -3,7 +3,13 @@ import Introduction from '@/components/landing-page/herro/Introduction';
 
 const Herro = () => {
   return (
-    <section className="flex justify-between m-[0_auto] px-[40px] w-full max-w-[1000px]">
+    <section
+      className="
+        flex flex-col gap-5 items-center justify-between m-[0_auto] px-[20px] w-full max-w-[1000px]
+        md:flex-row
+        lg:px-[40px] lg:items-start
+      "
+    >
       <Introduction />
       <DailyTasks />
     </section>

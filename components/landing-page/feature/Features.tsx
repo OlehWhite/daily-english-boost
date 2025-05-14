@@ -18,7 +18,10 @@ const Features = () => {
       initial="hidden"
       variants={topAnimations}
       animate={isInView ? 'visible' : 'hidden'}
-      className="flex justify-between w-full max-w-[1000px] m-[0_auto] pt-[60px]"
+      className="
+        flex flex-col items-center gap-10 justify-between w-full max-w-[1000px] m-[0_auto] pt-[60px] px-[20px]
+        md:flex-row
+      "
     >
       <h2 className="text-[45px] leading-[96%] font-bold">Features</h2>
 
