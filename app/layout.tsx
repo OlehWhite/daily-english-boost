@@ -1,5 +1,5 @@
-import { authOptions } from '@/app/api/auth/[...nextauth]/route';
 import '@/app/globals.css';
+import { authOptions } from '@/app/lib/authOptions';
 import Provider from '@/components/Provider';
 import '@/styles/gradients.css';
 import type { Metadata } from 'next';

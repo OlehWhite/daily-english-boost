@@ -8,7 +8,7 @@ import { ReactNode } from 'react';
 
 interface Props {
   children: ReactNode;
-  session: Session;
+  session: Session | null;
 }
 
 const Provider = ({ session, children }: Props) => {
