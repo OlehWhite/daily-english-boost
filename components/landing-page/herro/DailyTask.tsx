@@ -12,7 +12,7 @@ const DailyTask = ({ dailyTask }: Props) => {
       variants={childAnimations}
       className="border-gray-300 border-1 rounded-[6px] p-[10px]"
     >
-      <div className="flex justify-between items-center">
+      <div className="flex flex-wrap justify-between items-center">
         <h3 className="text-[18px] font-bold">{dailyTask.title}</h3>
         {dailyTask.enabled ? (
           <span className="text-[12px] font-bold text-green-400">can use!</span>

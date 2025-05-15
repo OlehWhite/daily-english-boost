@@ -1,36 +1,34 @@
-import SignOutIMG from '@/public/images/logout.png';
-import { signOut, useSession } from 'next-auth/react';
+'use client';
+
+import { LINKS } from '@/types/enums/links';
+import { motion } from 'framer-motion';
+import { useSession } from 'next-auth/react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const Client = () => {
-  const { data: session, status } = useSession();
-  const data = useSession();
+  const { data: session } = useSession();
 
-  console.log(data);
-  if (status === 'loading') return null;
   if (!session) return null;
 
   return (
-    <div className="flex gap-4 items-center">
-      <Image
-        src={session?.user?.image ?? ''}
-        width={40}
-        height={40}
-        alt={session?.user?.name ?? ''}
-        priority
-        className="rounded-full"
-      />
-
-      {/*<Button onClick={() => signOut()}>*/}
-      <button
-        onClick={() => signOut({ callbackUrl: '/' })}
-        className="cursor-pointer hover:scale-75 duration-300"
-      >
-        <Image src={SignOutIMG} width={30} alt="Log out" />
-      </button>
-
-      {/*</Button>*/}
-    </div>
+    <motion.div
+      className="flex gap-4 items-center"
+      initial={{ opacity: 0, y: 50 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.7, ease: 'easeOut' }}
+    >
+      <Link href={LINKS.PROFILE}>
+        <Image
+          src={session?.user?.image ?? ''}
+          width={40}
+          height={40}
+          alt={session?.user?.name ?? ''}
+          priority
+          className="rounded-full"
+        />
+      </Link>
+    </motion.div>
   );
 };
 

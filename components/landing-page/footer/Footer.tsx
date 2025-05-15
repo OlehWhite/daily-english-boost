@@ -2,8 +2,11 @@
 
 import { defAnimations } from '@/constants/animations';
 import { socialsMedias } from '@/constants/socials-medias';
+import SignOutIMG from '@/public/images/logout.png';
+import { LINKS } from '@/types/enums/links';
 import { motion } from 'framer-motion';
 import { useInView } from 'motion/react';
+import { signOut } from 'next-auth/react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useRef } from 'react';
@@ -31,6 +34,10 @@ const Footer = () => {
           />
         </Link>
       ))}
+
+      <button onClick={() => signOut({ callbackUrl: LINKS.HOME })} className="cursor-pointer">
+        <Image src={SignOutIMG} width={30} height={30} alt="Log out" />
+      </button>
     </motion.footer>
   );
 };

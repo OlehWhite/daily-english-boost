@@ -20,7 +20,11 @@ const luckiestGuy = Luckiest_Guy({
   display: 'swap',
 });
 
-export default async function RootLayout({ children }: { children: ReactNode }) {
+interface Props {
+  children: ReactNode;
+}
+
+export default async function RootLayout({ children }: Props) {
   const session = await getServerSession(authOptions);
 
   return (

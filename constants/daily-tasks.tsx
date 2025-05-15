@@ -5,14 +5,14 @@ export const dailyTasks: IDailyTask[] = [
     id: 0,
     title: 'Translate the sentence',
     description: 'Translate: "She has a keen mind and thinks on her feet."',
-    enabled: true,
+    enabled: false,
   },
   {
     id: 1,
     title: 'Word of the day',
     description:
       'Define the word "resilient", write a sentence with it, and try to use it in a conversation today.',
-    enabled: true,
+    enabled: false,
   },
   {
     id: 2,

@@ -1,13 +1,3 @@
-export const startedButton = {
-  hidden: { opacity: 0, y: 50 },
-  visible: { opacity: 1, y: 0 },
-};
-
-export const loginButton = {
-  hidden: { opacity: 0, x: 60 },
-  visible: { opacity: 1, x: 0 },
-};
-
 export const animationLogo = {
   hidden: { opacity: 0, y: 50 },
   visible: { opacity: 1, y: 0 },
@@ -16,17 +6,6 @@ export const animationLogo = {
 export const animationText = {
   hidden: { opacity: 0, x: -150 },
   visible: { opacity: 1, x: 0 },
-};
-
-export const navAnimations = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.3,
-      delayChildren: 2,
-    },
-  },
 };
 
 export const childAnimations = {
