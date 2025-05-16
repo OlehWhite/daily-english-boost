@@ -1,23 +1,20 @@
 'use client';
 
 import { rightFeedbacksAnimations } from '@/constants/animations';
+import useMotionWithDelay from '@/hooks/useMotionWithDelay';
 import { LINKS } from '@/types/enums/links';
 import { STATUSES } from '@/types/enums/statuses';
 import { motion } from 'framer-motion';
-import { useInView } from 'motion/react';
 import { useSession } from 'next-auth/react';
 import Link from 'next/link';
-import { useRef } from 'react';
 
 const Introduction = () => {
-  const ref = useRef<HTMLDivElement>(null);
-  const isInView = useInView(ref, { once: true });
-
+  const { ref, isInView } = useMotionWithDelay<HTMLDivElement>();
   const { status } = useSession();
 
   const isAuthenticated = status === STATUSES.AUTHENTICATED;
   const title = isAuthenticated ? 'Вчитися' : 'Увійти';
-  const href = isAuthenticated ? LINKS.PROFILE : LINKS.SIGNIN;
+  const href = isAuthenticated ? LINKS.PROFILE : LINKS.SIGNIN_API;
 
   return (
     <motion.div

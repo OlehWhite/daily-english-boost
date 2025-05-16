@@ -2,18 +2,16 @@
 
 import { defAnimations } from '@/constants/animations';
 import { socialsMedias } from '@/constants/socials-medias';
+import useMotionWithDelay from '@/hooks/useMotionWithDelay';
 import SignOutIMG from '@/public/images/logout.png';
 import { LINKS } from '@/types/enums/links';
 import { motion } from 'framer-motion';
-import { useInView } from 'motion/react';
 import { signOut } from 'next-auth/react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { useRef } from 'react';
 
 const Footer = () => {
-  const ref = useRef<HTMLElement>(null);
-  const isInView = useInView(ref, { once: true });
+  const { ref, isInView } = useMotionWithDelay<HTMLElement>();
 
   return (
     <motion.footer

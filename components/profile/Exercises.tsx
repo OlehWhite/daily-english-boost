@@ -1,16 +1,14 @@
 import { childAnimations, dailyTasksAnimations } from '@/constants/animations';
 import { exercises } from '@/constants/exercises';
-import { motion, useInView } from 'framer-motion';
+import useMotionWithDelay from '@/hooks/useMotionWithDelay';
+import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
-import { useRef } from 'react';
 
-// Create a motion-enhanced Link component
 const MotionLink = motion(Link);
 
 const Exercises = () => {
-  const ref = useRef<HTMLDivElement>(null);
-  const isInView = useInView(ref, { once: true });
+  const { ref, isInView } = useMotionWithDelay<HTMLDivElement>();
 
   return (
     <motion.div
@@ -30,10 +28,16 @@ const Exercises = () => {
             index % 3 === 2 ? 'col-span-2' : 'w-full'
           }`}
         >
-          <span className="bg-white p-[15px] rounded-full">
+          <span className="bg-white p-[15px] rounded-full shadow-[2px_3px_7px_-1px_rgba(0,0,0,0.25)] ">
             <Image src={exercise.icon} width={40} height={40} alt={exercise.title} />
           </span>
-          <p className="text-center mt-1">{exercise.title}</p>
+
+          <p
+            style={{ color: exercise.color }}
+            className="text-gray-500 leading-[1.2] text-[18px] font-bold text-center mt-1"
+          >
+            {exercise.title}
+          </p>
         </MotionLink>
       ))}
     </motion.div>

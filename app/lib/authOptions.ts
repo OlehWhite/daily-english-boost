@@ -1,3 +1,4 @@
+import { LINKS } from '@/types/enums/links';
 import { NextAuthOptions } from 'next-auth';
 import GoogleProvider from 'next-auth/providers/google';
 
@@ -10,7 +11,7 @@ export const authOptions: NextAuthOptions = {
   ],
   secret: process.env.NEXTAUTH_SECRET,
   pages: {
-    signIn: '/signin',
+    signIn: LINKS.SIGNIN,
   },
   callbacks: {
     async session({ session, token }) {

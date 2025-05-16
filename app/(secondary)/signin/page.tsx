@@ -10,7 +10,7 @@ const Page = () => {
         <h1 className="text-2xl font-bold mb-6">Welcome to Daily English Boost</h1>
         <p className="mb-4">Sign in to save your progress and continue learning 🚀</p>
         <button
-          onClick={() => signIn('google', { callbackUrl: LINKS.HOME })}
+          onClick={() => signIn('google', { callbackUrl: LINKS.PROFILE })}
           className="cursor-pointer bg-black text-white px-6 py-3 rounded-lg hover:bg-gray-800 transition"
         >
           Sign in with Google

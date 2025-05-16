@@ -1,7 +1,8 @@
 'use client';
 
-import { motion, useInView, Variants } from 'motion/react';
-import { ReactNode, useRef } from 'react';
+import useMotionWithDelay from '@/hooks/useMotionWithDelay';
+import { motion, Variants } from 'motion/react';
+import { ReactNode } from 'react';
 
 interface Props {
   children: ReactNode;
@@ -11,8 +12,7 @@ interface Props {
 }
 
 const Button = ({ children, delay = 0.5, variants, onClick }: Props) => {
-  const ref = useRef<HTMLButtonElement>(null);
-  const isInView = useInView(ref, { once: true });
+  const { ref, isInView } = useMotionWithDelay<HTMLButtonElement>();
 
   return (
     <motion.span

@@ -3,13 +3,11 @@
 import DailyTask from '@/components/landing-page/herro/DailyTask';
 import { dailyTasksAnimations, leftFeedbacksAnimations } from '@/constants/animations';
 import { dailyTasks } from '@/constants/daily-tasks';
+import useMotionWithDelay from '@/hooks/useMotionWithDelay';
 import { motion } from 'framer-motion';
-import { useInView } from 'motion/react';
-import { useRef } from 'react';
 
 const DailyTasks = () => {
-  const ref = useRef<HTMLDivElement>(null);
-  const isInView = useInView(ref, { once: true });
+  const { ref, isInView } = useMotionWithDelay<HTMLDivElement>();
 
   return (
     <motion.div
