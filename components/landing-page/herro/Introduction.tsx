@@ -1,14 +1,20 @@
 'use client';
 
 import { rightFeedbacksAnimations } from '@/constants/animations';
+import useMotionWithDelay from '@/hooks/useMotionWithDelay';
+import { LINKS } from '@/types/enums/links';
+import { STATUSES } from '@/types/enums/statuses';
 import { motion } from 'framer-motion';
-import { useInView } from 'motion/react';
+import { useSession } from 'next-auth/react';
 import Link from 'next/link';
-import { useRef } from 'react';
 
 const Introduction = () => {
-  const ref = useRef<HTMLDivElement>(null);
-  const isInView = useInView(ref, { once: true });
+  const { ref, isInView } = useMotionWithDelay<HTMLDivElement>();
+  const { status } = useSession();
+
+  const isAuthenticated = status === STATUSES.AUTHENTICATED;
+  const title = isAuthenticated ? 'Вчитися' : 'Увійти';
+  const href = isAuthenticated ? LINKS.PROFILE : LINKS.SIGNIN_API;
 
   return (
     <motion.div
@@ -33,10 +39,10 @@ const Introduction = () => {
       </p>
 
       <Link
-        href="/api/auth/signin"
-        className="w-[120px] h-[40px] rounded-md cursor-pointer bg-blue-400 hover:bg-blue-500 duration-300 text-white font-semibold flex items-center justify-center "
+        href={href}
+        className="w-full max-w-[120px] h-[40px] rounded-md cursor-pointer bg-blue-400 hover:bg-blue-500 duration-300 text-white font-semibold flex items-center justify-center "
       >
-        Try Demo
+        {title}
       </Link>
     </motion.div>
   );

@@ -3,13 +3,11 @@
 import InfoBlock from '@/components/landing-page/how-it-works/InfoBlock';
 import { introDesAnimations, topAnimations } from '@/constants/animations';
 import { howItWorks } from '@/constants/how-it-works';
+import useMotionWithDelay from '@/hooks/useMotionWithDelay';
 import { motion } from 'framer-motion';
-import { useInView } from 'motion/react';
-import { useRef } from 'react';
 
 const HowItWorks = () => {
-  const ref = useRef<HTMLSelectElement>(null);
-  const isInView = useInView(ref, { once: true });
+  const { ref, isInView } = useMotionWithDelay<HTMLSelectElement>();
 
   return (
     <motion.section

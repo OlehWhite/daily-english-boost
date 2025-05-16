@@ -2,15 +2,13 @@
 
 import { childVerticalAnimations, introDesAnimations, topAnimations } from '@/constants/animations';
 import { features } from '@/constants/features';
+import useMotionWithDelay from '@/hooks/useMotionWithDelay';
 import CheckIMG from '@/public/images/check.png';
 import { motion } from 'framer-motion';
-import { useInView } from 'motion/react';
 import Image from 'next/image';
-import { useRef } from 'react';
 
 const Features = () => {
-  const ref = useRef<HTMLSelectElement>(null);
-  const isInView = useInView(ref, { once: true });
+  const { ref, isInView } = useMotionWithDelay<HTMLSelectElement>();
 
   return (
     <motion.section
