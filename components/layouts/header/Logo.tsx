@@ -8,7 +8,7 @@ import Link from 'next/link';
 
 const Logo = () => {
   return (
-    <Link href="/" className="flex gap-3 items-center cursor-pointer">
+    <Link href="/public" className="flex gap-3 items-center cursor-pointer">
       <motion.div
         initial="hidden"
         animate="visible"

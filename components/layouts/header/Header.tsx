@@ -1,7 +1,7 @@
 'use client';
 
-import Client from '@/components/landing-page/header/Client';
-import Logo from '@/components/landing-page/header/Logo';
+import Client from '@/components/layouts/header/Client';
+import Logo from '@/components/layouts/header/Logo';
 
 const Header = () => {
   return (

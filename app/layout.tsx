@@ -1,10 +1,10 @@
 import '@/app/globals.css';
 import { authOptions } from '@/app/lib/authOptions';
-import Provider from '@/components/Provider';
+import Providers from '@/components/layouts/Providers';
 import '@/styles/gradients.css';
 import type { Metadata } from 'next';
 import { getServerSession } from 'next-auth';
-import { Luckiest_Guy } from 'next/font/google';
+import { Golos_Text } from 'next/font/google';
 import { ReactNode } from 'react';
 
 export const metadata: Metadata = {
@@ -12,11 +12,11 @@ export const metadata: Metadata = {
   description: 'Welcome to our website where you can learn english!',
 };
 
-const luckiestGuy = Luckiest_Guy({
+const golosText = Golos_Text({
   weight: '400',
   style: 'normal',
   subsets: ['latin'],
-  variable: '--font-luckiest-guy',
+  variable: '--font-golos-text',
   display: 'swap',
 });
 
@@ -29,8 +29,8 @@ export default async function RootLayout({ children }: Props) {
 
   return (
     <html lang="en">
-      <body className={`${luckiestGuy.variable} font-[family-name:var(--font-luckiest-guy)]`}>
-        <Provider session={session}>{children}</Provider>
+      <body className={`${golosText.variable} `}>
+        <Providers session={session}>{children}</Providers>
       </body>
     </html>
   );

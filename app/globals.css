@@ -6,8 +6,8 @@
   --foreground: #000000;
 }
 
-.luckiest-guy-regular {
-  font-family: 'Luckiest Guy', cursive;
+.golos-text-regular {
+  font-family: "Golos Text", sans-serif;
 }
 
 html {
@@ -15,11 +15,12 @@ html {
 }
 
 body {
-  min-height: 100vh; /* Змінено з height на min-height для покриття контенту */
+  min-height: 100vh;
   background: var(--background);
   background-repeat: no-repeat; /* Запобігає повторенню фону */
   background-size: cover; /* Масштабує фон, щоб покрити весь елемент */
   background-attachment: fixed; /* Фіксує фон, щоб він не прокручувався */
   color: var(--foreground);
-  font-family: 'Luckiest Guy', cursive;
+  font-family: "Golos Text", sans-serif;
+
 }

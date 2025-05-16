@@ -1,4 +1,4 @@
-import ProgressBar from '@/components/UI/ProgressBar';
+import ProgressBar from '@/components/ui/ProgressBar';
 import { leftFeedbacksAnimations } from '@/constants/animations';
 import { motion, useInView } from 'motion/react';
 import { useRef } from 'react';
