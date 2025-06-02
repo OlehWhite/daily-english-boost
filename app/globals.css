@@ -22,5 +22,4 @@ body {
   background-attachment: fixed; /* Фіксує фон, щоб він не прокручувався */
   color: var(--foreground);
   font-family: "Golos Text", sans-serif;
-
 }

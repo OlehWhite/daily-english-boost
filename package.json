@@ -20,15 +20,12 @@
     ]
   },
   "dependencies": {
-    "@heroui/progress": "^2.2.15",
-    "@heroui/react": "^2.7.8",
     "framer-motion": "^12.9.4",
     "motion": "^12.9.4",
     "next": "15.3.1",
     "next-auth": "^4.24.11",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "react-simple-star-rating": "^5.1.7"
+    "react-dom": "^19.0.0"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
