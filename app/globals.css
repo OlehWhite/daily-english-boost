@@ -17,9 +17,9 @@ html {
 body {
   min-height: 100vh;
   background: var(--background);
-  background-repeat: no-repeat; /* Запобігає повторенню фону */
-  background-size: cover; /* Масштабує фон, щоб покрити весь елемент */
-  background-attachment: fixed; /* Фіксує фон, щоб він не прокручувався */
+  background-repeat: no-repeat; /*  Запобігає повторенню фону */
+  background-size: cover; /*  Масштабує фон, щоб покрити весь елемент */
+  background-attachment: fixed; /*  Фіксує фон, щоб він не прокручувався */
   color: var(--foreground);
   font-family: "Golos Text", sans-serif;
 }
